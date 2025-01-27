@@ -39,7 +39,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.MKDOCS_GH_PAGES_3 }}
-          publish_dir: site
-          publish_branch: gh-pages
+          #publish_dir: site
+          #publish_branch: gh-pages
           commit_message: 'Deploy MkDocs site'
-          force_orphan: true
+          #force_orphan: true
