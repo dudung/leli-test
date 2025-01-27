@@ -1,0 +1,32 @@
+site_name: lesslines
+site_description: A Python package to simplify numerical methods.
+site_author: Sparisoma Viridi
+site_dir: site
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search.highlight
+    - content.tabs
+  palette:
+    scheme: light
+    primary: indigo
+    accent: pink
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: installation.md
+      - Usage: usage.md
+  - Not Important:
+      - Empty: empty.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          selection:
+            docstring_style: google
+          options:
+            show_source: true
