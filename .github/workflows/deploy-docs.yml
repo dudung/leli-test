@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: 3.9
 
       - name: Install dependencies
         run: |
@@ -40,7 +40,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.MKDOCS_GH_PAGES_3 }}
-          publish_dir: ./site
+          publish_dir: site
           publish_branch: gh-pages
           commit_message: 'Deploy MkDocs site'
           force_orphan: true
